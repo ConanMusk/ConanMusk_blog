@@ -13,7 +13,7 @@ SECRET_KEY = 'lh((89!1ve=(p1kr!w$9@#6r8mmqirljez8gzd(mch%*=27%lw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.zmrenwu.com']
 
 
 # Application definition
@@ -113,10 +113,11 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 配置静态文件目录
-STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static'),
-    ]
+#STATICFILES_DIRS = [
+  #      os.path.join(BASE_DIR, 'static'),
+    #]
 SUMMERNOTE_CONFIG = {
     # Using SummernoteWidget - iframe mode
     'iframe': True,  # or set False to use SummernoteInplaceWidget - no iframe mode
